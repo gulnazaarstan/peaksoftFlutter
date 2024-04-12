@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
         ),
         ElevatedButton(
           onPressed: (){
-            if(name.isEmpty && email.isEmpty)
+            if(name.isEmpty && email.isEmpty && job.isEmpty)
             {ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("The blanks can not be emty.")));}
             else{Navigator.push(context, MaterialPageRoute(
               builder: (context)=>SecondPage(
