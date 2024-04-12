@@ -1,0 +1,1 @@
+ C:\\Users\\user\\Desktop\\peaksoftFlutter\\sabak_13_project_with_function\\.dart_tool\\flutter_build\\74eb67adc14259ed3ed7b5e0ee860602\\native_assets.yaml: 

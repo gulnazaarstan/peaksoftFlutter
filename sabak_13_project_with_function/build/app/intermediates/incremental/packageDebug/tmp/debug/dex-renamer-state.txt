@@ -1,0 +1,4 @@
+#Thu Apr 11 18:27:42 KGT 2024
+base.0=C\:\\Users\\user\\Desktop\\peaksoftFlutter\\sabak_13_project_with_function\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
