@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(const MyApp());
-} 
+  runApp(const YourApp());
+}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class YourApp extends StatelessWidget {
+  const YourApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,50 +22,65 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
-
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int san = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
           backgroundColor: Colors.grey,
-          title: Text(
-            "Counter App",
-            style: TextStyle(
-              color: Colors.green,
-              fontSize: 100.2,
+          leading: const Icon(Icons.sort),
+          title: Text('Counter App'),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.settings),
             ),
-          )),
-      body: Column(children: [
-        Center(
-            child: Container(
-          color: Colors.red,
-          height: 50,
-          width: 100,
-         )),
-        
-         SizedBox(width: 20,),
-         Center(
-            child: Container(
-          color: Colors.red,
-          height: 50,
-          width: 100,
-        )),
-        
-        SizedBox(width: 20,),
-          Center(
-            child: Container(
-          color: Colors.red,
-          height: 50,
-          width: 100,
-        )),
-      ]),
-    );
+          ],
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                san.toString(),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      setState(() {});
+                      san++;
+                      print(san);
+                    },
+                    icon: const Icon(Icons.add),
+                    label: const Text('Increment'),
+                  ),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      setState(() {});
+                      san--;
+                    },
+                    icon: const Icon(Icons.remove),
+                    label: const Text('Decrement'),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }
