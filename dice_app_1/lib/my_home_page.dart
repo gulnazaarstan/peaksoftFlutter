@@ -34,9 +34,9 @@ void activing() {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            if (FirstDice1 == 6 && SecondDice2 == 6) Text('Эн Сонун!!!',
+            if (FirstDice1 == 6 && SecondDice2 == 6) const Text('Эн Сонун!!!',
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.white, 
               fontSize: 30,
               fontWeight: FontWeight.bold
             ),),
