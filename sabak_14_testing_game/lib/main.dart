@@ -8,19 +8,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false ,
       title: 'Flutter Demo',
       theme: ThemeData(
-            
-        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
+        scaffoldBackgroundColor: Color(0xff363636),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: const MyHomePage('Тапшырма 7'),
     );
   }
 }
