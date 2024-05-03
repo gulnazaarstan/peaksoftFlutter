@@ -38,7 +38,7 @@ class PianoView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                             child: Column(mainAxisAlignment: MainAxisAlignment.end,
-                children: [Text(notesKey[index],
+                children: [Text(notesKey[index], 
                              style: const TextStyle(
                              fontSize: 18,
                              fontWeight: FontWeight.bold,
