@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sabak_10_hylophone/components/piano_keys.dart';
+import 'package:sabak_12_piano_app/components/piano_keys.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class HylophoneView extends StatefulWidget {
   const HylophoneView({super.key});
@@ -9,37 +10,34 @@ class HylophoneView extends StatefulWidget {
 }
 
 class _HylophoneViewState extends State<HylophoneView> {
+
+final audioPlayers = AudioPlayer();
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea (
+    return SafeArea(
       child: Scaffold(
-        appBar: AppBar(backgroundColor: Color(0xff363636),
-      ),
-      body: const Column(children: [
-      PianoKeys(
-        color: Colors.green,
-       text: 'Do',
+        appBar: AppBar(
+          backgroundColor: Color(0xff363636),
         ),
-       PianoKeys(
-        color: Colors.yellow, text: 'Re',
-        ),
-       PianoKeys(
-        color: Colors.brown, text: 'Mi',
-        ),
-       PianoKeys(
-        color: Colors.orange, text: 'Fa',
-        ),
-       PianoKeys(
-        color: Colors.red, text: 'Sol',
-        ),
-        PianoKeys(
-        color: Colors.blue, text: 'La',
-        ),
-         PianoKeys(
-        color: Colors.pink, text: 'Si',
-        ),
-      ],
-      ),
+        body:  Column(
+          children: [
+        PianoKeys(color: Colors.green, text: 'Do', onTap: () =>
+        audioPlayers.play(AssetSource('nota1.mp3')),),
+        PianoKeys(color: Colors.yellow, text: 'Re', onTap: () =>
+        audioPlayers.play(AssetSource('nota2.mp3')),),
+        PianoKeys(color: Colors.brown, text: 'Mi', onTap: () =>
+        audioPlayers.play(AssetSource('nota3.mp3')),),
+        PianoKeys(color: Colors.orange, text: 'Fa', onTap: ()  =>
+        audioPlayers.play(AssetSource('nota4.mp3')),), 
+        PianoKeys(color: Colors.red, text: 'Sol', onTap: () =>
+        audioPlayers.play(AssetSource('nota5.mp3')),),
+        PianoKeys(color: Colors.blue, text: 'La', onTap: () =>
+        audioPlayers.play(AssetSource('nota6.mp3')),),
+        PianoKeys(color: Colors.pink, text: 'Si', onTap: () =>
+        audioPlayers.play(AssetSource('nota7.mp3')),),
+        
+        ],),
       ),
     );
   }
