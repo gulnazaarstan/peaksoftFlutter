@@ -23,19 +23,19 @@ final audioPlayers = AudioPlayer();
         body:  Column(
           children: [
         PianoKeys(color: Colors.green, text: 'Do', onTap: () =>
-        audioPlayers.play(AssetSource('nota1.mp3')),),
+        audioPlayers.play(AssetSource('notes/nota1.mp3')),),
         PianoKeys(color: Colors.yellow, text: 'Re', onTap: () =>
-        audioPlayers.play(AssetSource('nota2.mp3')),),
+        audioPlayers.play(AssetSource('notes/nota2.mp3')),),
         PianoKeys(color: Colors.brown, text: 'Mi', onTap: () =>
-        audioPlayers.play(AssetSource('nota3.mp3')),),
+        audioPlayers.play(AssetSource('notes/nota3.mp3')),),
         PianoKeys(color: Colors.orange, text: 'Fa', onTap: ()  =>
-        audioPlayers.play(AssetSource('nota4.mp3')),), 
+        audioPlayers.play(AssetSource('notes/nota4.mp3')),), 
         PianoKeys(color: Colors.red, text: 'Sol', onTap: () =>
-        audioPlayers.play(AssetSource('nota5.mp3')),),
+        audioPlayers.play(AssetSource('notes/nota5.mp3')),),
         PianoKeys(color: Colors.blue, text: 'La', onTap: () =>
-        audioPlayers.play(AssetSource('nota6.mp3')),),
+        audioPlayers.play(AssetSource('notes/nota6.mp3')),),
         PianoKeys(color: Colors.pink, text: 'Si', onTap: () =>
-        audioPlayers.play(AssetSource('nota7.mp3')),),
+        audioPlayers.play(AssetSource('notes/nota7.mp3')),),
         
         ],),
       ),
